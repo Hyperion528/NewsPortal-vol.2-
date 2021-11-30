@@ -1,0 +1,16 @@
+{% extends 'flatpages/default.html' %}
+ 
+{% block title %} Post {% endblock title %} 
+ 
+{% block content %}
+
+<h1 style="text-align: left;">{{ post.category.name|title}}</h1>
+
+<h3 style="text-align: right;">{{ post.date_create|date:"d-m-Y H:i" }}</h3>
+<h1 style="text-align: center;"><strong>{{ post|title }}</strong></h1>
+
+<p style="text-align: justify;">{{ post.full_text }} </p>
+
+<p style="text-align: right;"><th> Автор </th>{{ post.author }}</p>
+
+{% endblock content %}
